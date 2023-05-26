@@ -3,13 +3,13 @@ const csv = require('csv-parser');
 const fs = require('fs');
 const app = express();
 
-// Define the route for loading student details with pagination
+// Define route for loading student details with pagination
 app.get('/students', (req, res) => {
   const { page, pageSize } = req.query;
 
-  // Read the data file using the appropriate module based on the file format
-  const fileFormat = 'csv'; // Replace with the actual file format you're using
-  const filePath = 'Students.' + fileFormat; // Replace with the path to your data file
+  // Read the data file here
+  const fileFormat = 'csv'; 
+  const filePath = 'Students.' + fileFormat; 
   const data = [];
 
   fs.createReadStream(filePath)
